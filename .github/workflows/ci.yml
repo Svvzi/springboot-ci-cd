@@ -48,3 +48,4 @@ jobs:
         docker rm johan-app || true
         docker pull a6du/johan-app:latest
         docker run -d --name johan-app -p 8080:8080 a6du/johan-app:latest
+##
