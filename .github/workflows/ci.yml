@@ -28,7 +28,7 @@ jobs:
         password: ${{ secrets.DOCKER_PASSWORD }}
 
     - name: Build Docker image
-      run: docker build -t svvzi/johan-app:latest .
+      run: docker build -t a6du/johan-app:latest .
 
     - name: Push Docker image
-      run: docker push svvzi/johan-app:latest
+      run: docker push a6du/johan-app:latest
