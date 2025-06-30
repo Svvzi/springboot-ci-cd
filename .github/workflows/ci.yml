@@ -6,7 +6,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
 
     steps:
     - name: Checkout code
@@ -53,4 +53,11 @@ jobs:
           docker rm johan-app || true
           docker pull a6du/johan-app:latest
           docker run -d --name johan-app -p 8080:8080 a6du/johan-app:latest
+
+    - name: Run Docker image locally
+      run: |
+        docker stop johan-app || true
+        docker rm johan-app || true
+        docker pull a6du/johan-app:latest
+        docker run -d --name johan-app -p 8080:8080 a6du/johan-app:latest
 
